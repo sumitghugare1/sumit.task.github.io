@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .task-manager {
+            max-width: 400px;
+            width: 100%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #27ae60;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            background-color: #ecf0f1;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li span {
+            flex-grow: 1;
+        }
+
+        .low {
+            border: 2px solid #2ecc71;
+        }
+
+        .medium {
+            border: 2px solid #f39c12;
+        }
+
+        .high {
+            border: 2px solid #e74c3c;
+        }
+    </style>
+    <title>Task Manager</title>
+</head>
+<body>
+    <div class="task-manager">
+        <h1>Task Manager</h1>
+        
+        <!-- Form to add tasks -->
+        <form id="taskForm">
+            <label for="taskName">Task:</label>
+            <input type="text" id="taskName" name="taskName" required>
+
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate">
+
+            <button type="button" onclick="addTask()">Add Task</button>
+        </form>
+
+        <!-- Task list -->
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        // JavaScript code for task management
+        function addTask() {
+            // Get form values
+            var taskName = document.getElementById("taskName").value;
+            var priority = document.getElementById("priority").value;
+            var dueDate = document.getElementById("dueDate").value;
+
+            // Create a new task object
+            var task = {
+                name: taskName,
+                priority: priority,
+                dueDate: dueDate
+            };
+
+            // Add task to the task list
+            addTaskToList(task);
+
+            // Clear the form
+            document.getElementById("taskForm").reset();
+        }
+
+        function addTaskToList(task) {
+            // Get the task list
+            var taskList = document.getElementById("taskList");
+
+            // Create a new list item
+            var listItem = document.createElement("li");
+
+            // Set the task details
+            listItem.innerHTML = `<span>${task.name} - Priority: ${task.priority} - Due Date: ${task.dueDate}</span>
+                                  <button onclick="deleteTask(this)">Delete</button>`;
+
+            // Add a class based on priority for styling
+            listItem.classList.add(task.priority);
+
+            // Append the list item to the task list
+            taskList.appendChild(listItem);
+        }
+
+        function deleteTask(button) {
+            // Remove the task's parent li element when the delete button is clicked
+            var listItem = button.parentNode;
+            listItem.parentNode.removeChild(listItem);
+        }
+    </script>
+</body>
+</html>
