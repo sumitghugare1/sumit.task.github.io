@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Me</title>
+  <style>
+    body {
+      background-image: url('bg3.jpg');
+      background-size: cover;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: black;
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+    }
+    .contact-info {
+      text-align: center;
+      color: black;
+    }
+    iframe {
+      display: block;
+      margin: 0 auto;
+    }
+    .back-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Me</h1>
+    <img src="logo1.png" alt="Logo">
+    <div class="contact-info">
+      <p>Latur, India</p>
+      <p>Phone: 755#######</p>
+      <p>Email: sumitghugare3@gmail.com</p>
+    </div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3HxAFNXJS8HWUPYUri4D42QJ01BWeJC4Y8Nv7NgqCKoe17g/viewform?embedded=true" width="640" height="988" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="back-button">
+      <button onclick="goBack()">Go to Previous Page</button>
+    </div>
+  </div>
+</body>
+</html>
