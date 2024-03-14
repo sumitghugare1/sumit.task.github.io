@@ -1,88 +1,108 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Citypedia-About</title>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citypedia-About</title>
+    <style>
+        body {
+            background-image: url(bg4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .navbar {
+            background-color: #333;
+            display: flex;
+            align-items: center;
+        }
+        .navbar a {
+            color: #e7e7e7;
+        }
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+        }
+        .navbar .brand {
+            display: block;
+            color: white;
+            padding: 0 24px;
+            font-size: 24px;
+        }
+        .navbar ul li a {
+            color: white;
+            padding: 24px;
+            display: block;
+        }
+        .navbar ul a:hover,
+        .navbar ul a:focus,
+        .navbar ul .active {
+            background-color: gray;
+        }
+        .brand img {
+      width: 70px; 
+      margin-right: 50px;
+        }
+    </style>
 </head>
 <body>
-	<nav class="navbar">
-		<a class="brand" href="#">WritingWith ..Sumit</a>
-		<ul>
-		  <li>
-			<a class="active" href="index.html">Home</a>
-		  </li>
-		  <li>
-			<a  href="about.html">About</a>
-		  </li>
-		  <li>
-			<a href="#">Profile</a>
-		  </li>
-		  <li>
-			<a href="contact.html">Contact</a>
-		  </li>
-		</ul>
-	  </nav>
-<body background="bg3.jpg" > 
-  <div class="About-us">
-    <center><font color="Black"><h1> About Us </h1></center>
-	<center><img src="logo1.png" width="400" height="400"></center><font color="black">
-	<p>Citypedia is a city guide. our goal is to provide essential knowledge of cities.</p>
-	<hr>
-	<p></p>
-	<h2>Who Am I?</h2>
-    <p>Welcome to my writing journey! I'm Sumit, a passionate freelance writer dedicated to crafting engaging content across various topics.</p>
-    <p>Thank you for joining me on this journey. Feel free to reach out if you have any writing needs or if you simply want to connect!</p>
-  </div>
-  
- 
- 
-  <style>
-	
-	.navbar {
-  background-color: #333;
-  display: flex;
-  
-  align-items: center;
-}
-
-
-.navbar a {
-  color: #e7e7e7;
-}
-
-.navbar ul {
-
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
-
-  display: flex;
-  align-items:center;
-}
-
-.navbar .brand {
- 
-  display: block;
-  color: white;
- 
-  padding: 0 24px;
-  font-size: 24px;
-}
-
-.navbar ul li a {
-  color: white;
-  padding: 24px;
- 
-  display: block;
-}
-
-.navbar ul a:hover,
-.navbar ul a:focus,
-.navbar ul .active {
-  background-color: gray;
-}
-  </style>
-  
+  <nav class="navbar">
+    <a class="brand" href="#">
+      <img src="logo1.png" alt="Logo">
+    </a>
+    <ul>
+      <li>
+        <a class="active" href="index.html">Home</a>
+      </li>
+      <li>
+        <a  href="about.html">About</a>
+      </li>
+      <li>
+        <a href="#">Profile</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+    <div class="container">
+        <h1>About Us</h1>
+        <center><img src="logo1.png" width="400" height="400"></center>
+        <p>Citypedia is a city guide. Our goal is to provide essential knowledge of cities.</p>
+        <hr>
+        <p>Welcome to my writing journey! I'm Sumit, a passionate freelance writer dedicated to crafting engaging content across various topics.</p>
+        <p>Thank you for joining me on this journey. Feel free to reach out if you have any writing needs or if you simply want to connect!</p>
+    </div>
 </body>
 </html>
