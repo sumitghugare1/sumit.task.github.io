@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISRO Blog</title>
+    <style>
+        body {
+            background-image: url(bg4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto; /* Adjusted margin for better centering */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        }
+        h3 {
+            text-align: center;
+            color: #333; 
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+            padding: 0 10px; /* Added padding for better readability */
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+      
+        .navbar {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+        .navbar a {
+            color: #e7e7e7;
+            text-decoration: none; /* Ensure consistent styling */
+        }
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+        }
+        .navbar .brand {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .navbar ul li {
+            margin-right: 20px; /* Adjust spacing between nav items */
+        }
+        .navbar ul li a {
+            padding: 10px 20px; /* Adjust padding */
+            border-radius: 5px;
+        }
+        .navbar ul a:hover,
+        .navbar ul a:focus,
+        .navbar ul .active {
+            background-color: gray;
+        }
+        .brand img {
+            width: 70px; 
+            margin-right: 10px; /* Adjust spacing between logo and text */
+        }
+        .social-sharing {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-sharing h4 {
+            margin-bottom: 10px;
+        }
+        .social-sharing .share-icon {
+            margin: 0 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Comment Box */
+        .comment-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .comment-section h4 {
+            margin-bottom: 10px;
+        }
+        .comment-section textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+        .comment-section button {
+            padding: 10px 20px;
+            background-color: #007bff; 
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .comment-section button:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="brand" href="#">
+          <img src="logo1.png" alt="Logo">
+        </a>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallary.html">Gallary</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h3>Exploring the Stars: A Journey with ISRO</h3>
+        <img src="isro1.png" alt="ISRO Image">
+        <p>
+            Since its inception in 1969, the Indian Space Research Organisation (ISRO) has been at the forefront of India's space exploration endeavors. With a vision to harness space technology for national development, ISRO has achieved numerous milestones, making India proud on the global stage.
+        </p>
+        <h3>History and Milestones:</h3>
+        <ul>
+            <li><strong>Early Years:</strong> ISRO's journey began with the launch of Aryabhata, India's first satellite, in 1975. This marked the beginning of India's space odyssey.</li>
+            <li><strong>SLV Era:</strong> In the 1980s, ISRO developed the Satellite Launch Vehicle (SLV), which successfully launched satellites like Rohini and Apple.</li>
+            <li><strong>Pioneering Mars Mission:</strong> In 2013, ISRO made history with the Mars Orbiter Mission (Mangalyaan), becoming the first Asian nation to reach Mars orbit and the fourth space agency globally to do so.</li>
+            <li><strong>Chandrayaan Missions:</strong> ISRO's Chandrayaan-1
+
+ mission in 2008 discovered water molecules on the moon. Chandrayaan-2, launched in 2019, aimed to further explore the moon's surface, showcasing India's lunar exploration capabilities.</li>
+        </ul>
+        <h3>Technological Advancements:</h3>
+        <ul>
+            <li><strong>Reusable Launch Vehicle:</strong> ISRO is developing a reusable launch vehicle (RLV), aiming to reduce the cost of access to space.</li>
+            <li><strong>Gaganyaan Mission:</strong> ISRO's ambitious human spaceflight program, Gaganyaan, aims to send Indian astronauts to space, demonstrating India's capability in crewed missions.</li>
+            <li><strong>NavIC Navigation System:</strong> ISRO's Navigation with Indian Constellation (NavIC) provides accurate positioning services over India and the surrounding region, enhancing navigation and disaster management capabilities.</li>
+        </ul>
+        <h3>International Collaborations:</h3>
+        <ul>
+            <li><strong>Satellite Launch Services:</strong> ISRO has emerged as a reliable and cost-effective provider of satellite launch services, catering to international customers.</li>
+            <li><strong>Space Science Collaborations:</strong> ISRO collaborates with various space agencies worldwide on scientific missions, data sharing, and research initiatives, fostering international cooperation in space exploration.</li>
+        </ul>
+        <h3>Future Endeavors:</h3>
+        <ul>
+            <li><strong>Aditya-L1 Mission:</strong> ISRO's Aditya-L1 mission aims to study the sun's outermost layer, the corona, contributing to our understanding of solar dynamics and space weather phenomena.</li>
+            <li><strong>Interplanetary Missions:</strong> ISRO plans to explore Venus and other celestial bodies, expanding India's footprint in interplanetary exploration.</li>
+            <li><strong>Commercial Space Activities:</strong> ISRO is venturing into commercial space activities, including satellite launches, satellite-based services, and space tourism.</li>
+        </ul>
+        <div class="qa-section">
+            <!-- Your existing Q&A section -->
+        </div>
+    
+        <!-- Social Media Sharing Icons -->
+        <div class="social-sharing">
+            <h4>Share this article:</h4>
+            <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- Add more social media icons as needed -->
+        </div>
+    
+        <!-- Comment Box -->
+        <div class="comment-section">
+            <h4>Leave a Comment:</h4>
+            <textarea placeholder="Write your comment here..."></textarea>
+            <button>Post Comment</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

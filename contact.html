@@ -3,10 +3,15 @@
 <head>
   <title>Contact Me</title>
   <style>
-    body {
-      background-image: url('bg4.jpg');
-      background-size: cover;
-    }
+      body {
+            background-image: url(bg4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
     .container {
       max-width: 800px;
       margin: 0 auto;
@@ -34,18 +39,70 @@
       display: block;
       margin: 0 auto;
     }
-    .back-button {
-      text-align: center;
-      margin-top: 20px;
-    }
+  
+    .navbar {
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px; /* Add padding to the navbar */
+        }
+        .navbar a {
+            color: #e7e7e7;
+            text-decoration: none; /* Remove default underline */
+            padding: 10px;
+            display: block;
+        }
+        .navbar .brand {
+            color: white;
+            font-size: 24px;
+            margin-right: auto; /* Push the brand logo to the left */
+        }
+        .navbar .brand img {
+            width: 70px; /* Adjust the width of the brand image */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .navbar ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin-right: 10px; /* Add some space between navbar items */
+        }
+        .navbar ul a:hover,
+        .navbar ul a:focus,
+        .navbar ul .active {
+            background-color: gray;
+        }
   </style>
-  <script>
-    function goBack() {
-      window.history.back();
-    }
-  </script>
+ 
 </head>
 <body>
+  <nav class="navbar">
+    <a class="brand" href="#">
+        <img src="logo1.png" alt="Logo">
+    </a>
+    <ul>
+        <li>
+            <a class="active" href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li>
+            <a href="profile.html">Profile</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+        <li>
+            <a href="gallary.html">Gallary</a>
+          </li>
+    </ul>
+</nav>
+
   <div class="container">
     <h1>Contact Me</h1>
     <img src="logo1.png" alt="Logo">
@@ -55,8 +112,7 @@
       <p>Email: sumitghugare3@gmail.com</p>
     </div>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3HxAFNXJS8HWUPYUri4D42QJ01BWeJC4Y8Nv7NgqCKoe17g/viewform?embedded=true" width="640" height="988" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    <div class="back-button">
-      <button onclick="goBack()">Go to Previous Page</button>
+  
     </div>
   </div>
 </body>

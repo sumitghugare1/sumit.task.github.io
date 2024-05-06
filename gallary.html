@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WritingWith..Sumit</title>
+    <style>
+        body {
+            background-image: url(bg4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer; /* Add cursor pointer */
+        }
+        .navbar {
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px; /* Add padding to the navbar */
+            margin-bottom: 20px; /* Add margin at the bottom */
+        }
+        .navbar a {
+            color: #e7e7e7;
+            text-decoration: none; /* Remove default underline */
+            padding: 10px;
+            display: block;
+        }
+        .navbar .brand {
+            color: white;
+            font-size: 24px;
+            margin-right: auto; /* Push the brand logo to the left */
+        }
+        .navbar .brand img {
+            width: 50px; /* Adjust the width of the brand image */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .navbar ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin-right: 10px; /* Add some space between navbar items */
+        }
+        .navbar ul a:hover,
+        .navbar ul a:focus,
+        .navbar ul .active {
+            background-color: gray;
+        }
+        /* Gallery page styles */
+        .gallery-container {
+            padding: 20px;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+        .image-gallery img {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer; /* Add cursor pointer */
+        }
+        .image-gallery img:hover {
+            transform: scale(1.1);
+        }
+        /* Overlay styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .popup-img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+        /* Arrow styles */
+       
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <a class="brand" href="#">
+        <img src="logo1.png" alt="Logo">
+    </a>
+    <ul>
+        <li>
+            <a class="active" href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li>
+            <a href="profile.html">Profile</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+        <li>
+            <a href="gallery.html">Gallery</a> <!-- New Gallery Page Link -->
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1>Gallery</h1>
+    <div class="image-gallery">
+        <img src="5g.jpg" alt="Image 1" onclick="openImage('5g.jpg')">
+        <img src="amd.jpg" alt="Image 2" onclick="openImage('amd.jpg')">
+        <img src="isro.png" alt="Image 3" onclick="openImage('isro.png')">
+        <img src="bidve1.jpg" alt="Image 4" onclick="openImage('bidve1.jpg')">
+        <img src="wifi.jpeg" alt="Image 5" onclick="openImage('wifi.jpeg')">
+        <img src="nfc.png" alt="Image 6" onclick="openImage('nfc.png')">
+        <img src="5gg.png" alt="Image 7" onclick="openImage('5gg.png')">
+    </div>
+</div>
+
+<!-- Popup Overlay -->
+<div class="overlay" id="overlay" onclick="closeImage()">
+    <div class="arrow left" onclick="prevImage()"><i class="fas fa-chevron-left"></i></div>
+    <div class="arrow right" onclick="nextImage()"><i class="fas fa-chevron-right"></i></div>
+    <img src="" alt="Popup Image" id="popup-img" class="popup-img">
+</div>
+
+<script>
+    var currentImageIndex = 0; // Initialize current image index
+
+    // Array of image sources
+    var imageSources = [
+        "5g.jpg",
+        "amd.jpg",
+        "isro.png",
+        "bidve1.jpg",
+        "wifi.jpeg",
+        "nfc.png",
+        "5gg.png"
+    ];
+
+    // Function to open image in popup
+    function openImage(imageSrc) {
+        var overlay = document.getElementById("overlay");
+        var popupImg = document.getElementById("popup-img");
+
+        // Set image source
+        popupImg.src = imageSrc;
+
+        // Show overlay
+        overlay.style.display = "flex";
+
+        // Update current image index
+        currentImageIndex = imageSources.indexOf(imageSrc);
+    }
+
+    // Function to close popup
+    function closeImage() {
+        var overlay = document.getElementById("overlay");
+
+        // Hide overlay
+        overlay.style.display = "none";
+    }
+
+
+   
+</script>
+
+</body>
+</html>

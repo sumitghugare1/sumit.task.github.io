@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article 2: AMD vs Intel</title>
@@ -45,21 +47,100 @@
         a:hover {
             text-decoration: underline;
         }
-        button {
+     
+        .navbar {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar a {
+  color: #e7e7e7;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.navbar .brand {
+  display: block;
+  color: white;
+  padding: 0 24px;
+  font-size: 24px;
+  justify-content: space-between;
+}
+.navbar ul li a {
+  color: white;
+  padding: 24px;
+  display: block;
+}
+.navbar ul a:hover,
+.navbar ul a:focus,
+.navbar ul .active {
+  background-color: gray;
+}
+.brand img {
+width: 70px; 
+margin-right: 50px;
+}
+.social-sharing {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-sharing h4 {
+            margin-bottom: 10px;
+        }
+        .social-sharing .share-icon {
+            margin: 0 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Comment Box */
+        .comment-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .comment-section h4 {
+            margin-bottom: 10px;
+        }
+        .comment-section textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+        .comment-section button {
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color: #007bff; 
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        button:hover {
-            background-color: #0056b3;
+        .comment-section button:hover {
+            background-color: #0056b3; 
         }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <a class="brand" href="#">
+          <img src="logo1.png" alt="Logo">
+        </a>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallary.html">Gallary</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <h3>Article 2: "AMD vs Intel: Which CPUs Are Better in 2023?"</h3>
         <img src="amd.jpg" alt="Blog Post Image2">
@@ -75,7 +156,26 @@
             The downside? These chips can be power-hungry under load, which might lead to higher energy bills and the need for better desktop cooling solutions.
             Annoyingly, it seems that the refreshed 14th Gen chips are no exception, and although deliver better performance, haven’t been blessed with lower power consumption.
         </p>
+        <div class="qa-section">
+            <!-- Your existing Q&A section -->
+        </div>
+    
+        <!-- Social Media Sharing Icons -->
+        <div class="social-sharing">
+            <h4>Share this article:</h4>
+            <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- Add more social media icons as needed -->
+        </div>
+    
+        <!-- Comment Box -->
+        <div class="comment-section">
+            <h4>Leave a Comment:</h4>
+            <textarea placeholder="Write your comment here..."></textarea>
+            <button>Post Comment</button>
+        </div>
     </div>
-    <center><a href="index.html"><button>Home</button></a></center>
+   
 </body>
 </html>
